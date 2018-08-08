@@ -5,6 +5,8 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 
+import com.lak.tools.app.MetaUtils;
+
 /**
  * Created by lawrence on 2018/5/7.
  * <p>
@@ -35,6 +37,25 @@ public final class CtrlTools {
             }
         }
         return instance;
+    }
+
+    // ====================================================================
+    private static final String KEY_DESIGN_WIDTH = "design_width";      // 设计宽度
+    private static volatile CtrlTools DEFAULT_INSTANCE = null;
+
+    public static CtrlTools def(Context ctx) {
+        if (DEFAULT_INSTANCE == null) {
+            synchronized (CtrlTools.class) {
+                if (DEFAULT_INSTANCE == null)
+                    DEFAULT_INSTANCE = new CtrlTools(ctx);
+                boolean result = MetaUtils.hasName(ctx, KEY_DESIGN_WIDTH);
+                if (!result)
+                    throw new RuntimeException("you must set " + KEY_DESIGN_WIDTH + " in youur manifest.xml");
+                else
+                    DEFAULT_INSTANCE.setDesign(MetaUtils.getMetaData(ctx, KEY_DESIGN_WIDTH, 750));
+            }
+        }
+        return DEFAULT_INSTANCE;
     }
 
     // ====================================================================
