@@ -15,7 +15,7 @@ allprojects {
 Step 2. 在使用module中build.gradle中增加依赖
 ```
 dependencies {
-	implementation 'com.github.ak-star:tools:v1.0.0'
+	implementation 'com.github.ak-star:tools:v1.0.1'
 }
 ```
 
