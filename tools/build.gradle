@@ -37,4 +37,5 @@ dependencies {
 //    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
 
     implementation project(':logger')
+    api "com.jakewharton:disklrucache:$rootProject.ext.disklrucache_version"
 }

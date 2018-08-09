@@ -17,6 +17,10 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".disklrucache.DiskLruCacheActivity"
+            android:screenOrientation="portrait"/>
+
         <meta-data android:name="design_width" android:value="750" />
         <meta-data android:name="open_debug" android:value="true" />
     </application>
