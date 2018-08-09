@@ -15,9 +15,16 @@ allprojects {
 Step 2. 在使用module中build.gradle中增加依赖
 ```
 dependencies {
-	implementation 'com.github.ak-star:tools:v1.0.1'
+	implementation 'com.github.ak-star.tools:tools:v1.0.2'
 }
 ```
+
+# 常用工具：
+DiskLruCache 使用工具
+File操作工具
+net网络状态信息
+......
+
 
 # 效果：
 ![手机1](https://user-images.githubusercontent.com/16659573/41703676-bfafade0-7566-11e8-98d4-a7d2a4ffd99b.png)
